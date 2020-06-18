@@ -1,10 +1,12 @@
 telegram:
     token: {{ TELEGRAM_TOKEN }}
     allow_user: {{ TELEGRAM_USER }}
+{% if TELEGRAM_PROXY is defined %}
     proxy:
         url: '{{ TELEGRAM_PROXY_URL }}'
         username: {{ TELEGRAM_PROXY_USERNAME }}
         password: {{ TELEGRAM_PROXY_PASSWORD }}
+{% endif %}
 vmware:
     server: {{ VMWARE_SERVER }}
     username: {{ VMWARE_USER }}
